@@ -14,18 +14,27 @@ export default function HomeContainer({}: Props) {
   }, []);
 
   const getAllBikes = async () => {
-    const data = await bikeService.getAllBikes();
-    if (data.succes) {
-      //  L'api renvoi les coordinates à l'envers
-      const reverseCordinatesBikes: AllBikes = {
-        ...data.data,
-        bikes: data.data.bikes.map((el: Bike) => ({
-          ...el,
-          coordinates: el.coordinates.reverse() as [number, number],
-        })),
-      };
-      setallBikes(reverseCordinatesBikes);
-    }
+    const testBikes: AllBikes = require('../templates/bikes.json');
+    const reverseCordinatesBikes: AllBikes = {
+      ...testBikes,
+      bikes: testBikes.bikes.map(el => ({
+        ...el,
+        coordinates: el.coordinates.reverse() as [number, number],
+      })),
+    };
+    setallBikes(reverseCordinatesBikes);
+    // const data = await bikeService.getAllBikes();
+    // if (data.succes) {
+    //   //  L'api renvoi les coordinates à l'envers
+    //   const reverseCordinatesBikes: AllBikes = {
+    //     ...data.data,
+    //     bikes: data.data.bikes.map((el: Bike) => ({
+    //       ...el,
+    //       coordinates: el.coordinates.reverse() as [number, number],
+    //     })),
+    //   };
+    //   setallBikes(reverseCordinatesBikes);
+    // }
   };
 
   const onActionOnBike = (
