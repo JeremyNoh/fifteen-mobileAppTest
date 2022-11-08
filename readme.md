@@ -1,4 +1,4 @@
-<h1 align="center">APP mobile Fifteen React Native Tech Test</h1>
+<h1 align="center">APP mobile React Native Tech</h1>
 
 <br />
 
