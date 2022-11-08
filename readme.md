@@ -9,7 +9,7 @@
 - [x] Affichage colorés des Velos en fonction de leurs disponibilité ( Rouge :indisponible | Vert : Disponible )
 - [x] Info Suppplémentaire d'un Velo
 - [x] Ajout de variable d'environnement pour sécuriser la clé MapBox
-- [ ] Intégration du SDK
+- [ ] Intégration d'un SDK
 
 <br>
 
@@ -48,6 +48,7 @@ Afin de faire fonctionné correctement le projet vous aurez besoin de quelques c
 | MAPBOX_PRIVATE_KEY | Clé privé Mapbox |
 
 <br>
+
 ### Commande à savoir
 
 <kbd>npm i</kbd> or <kbd> yarn install</kbd> - Install Dependencies
